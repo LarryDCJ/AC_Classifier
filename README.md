@@ -59,4 +59,3 @@ Project Link: [https://github.com/LarryDCJ/AC_Classifier](https://github.com/Lar
 
 * [My amazing wife, Anna]()
 * [My wonderful daughter, Laila]()
-* []()
