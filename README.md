@@ -19,11 +19,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-LarryDCJ, AC_Classifier, LarryDCJ, LarryDCJ@icloud.com
+This model is being developed to recognize images of aircraft and provide the name, country of origin, and any legally free available technical data.
 
 
 ### Built With
