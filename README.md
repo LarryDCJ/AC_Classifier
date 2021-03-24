@@ -149,9 +149,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Your Name - [@twitter_handle](https://twitter.com/LarryDCJ) - [@email](mailto:larrydcj@icloud.com)
 
-Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
+Project Link: [https://github.com/LarryDCJ/AC_Classifier](https://github.com/LarryDCJ/AC_Classifier)
 
 
 
