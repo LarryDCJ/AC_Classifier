@@ -78,9 +78,9 @@ LarryDCJ, AC_Classifier, LarryDCJ, LarryDCJ@icloud.com
 
 ### Built With
 
-* [This]()
-* [](That)
-* []()
+* [Python]()
+* [Selenium]()
+* [chromedriver]()
 
 
 
@@ -101,7 +101,7 @@ npm install npm@latest -g
  
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo.git
+git clone https://github.com/LarryDCJ/AC_Classifier.git
 ```
 2. Install NPM packages
 ```sh
