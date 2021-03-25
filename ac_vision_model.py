@@ -1,17 +1,25 @@
 from fastai.data.all import *
 from fastai.vision.all import *
 from fastai.metrics import error_rate
-from pathlib import Path
+import pathlib
 from IPython.display import Image
 
-path = Path("images")
-fnames = get_image_files(path)
+path = ("images/") #define path to parent images folder
+file_names = get_image_files(path)
+print(len(file_names))
+print(file_names[0])
+
+def label_prepper(file_names):
+	for file in file_names:
+		file =
 
 datablock = DataBlock()
 
-datasets = datablock.datasets(fnames)
+datasets = datablock.datasets(file_names)
 
-datablock = DataBlock(get_items = get_image_files)
+datablock = DataBlock(get_items=get_image_files)
+
+
 
 
 

@@ -1,2 +1,4 @@
+fastai
+IPython
 PIL
 selenium
