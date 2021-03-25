@@ -20,12 +20,14 @@
 This model is being developed to recognize images of aircraft and provide the name, country of origin, and any legally free available technical data.
 
 Current A/C:
-A-10, AC-130,bAWACS, B-1, B-2, B-52, C-5, C-17, F-15E, F-16, F-22, F-35, KC-10, KC-46, MQ-1, MQ-9, and the RQ-4.
+A-10, AC-130, AWACS, B-1, B-2, B-52, C-5, C-17, F-15E, F-16, FA-18, F-22, F-35, KC-10, KC-46, Mirage_2000, MQ-1, MQ-9, RQ-4, SR-71.
+
 
 ### Built With
 
 * Python and a few built-in modules
 * Selenium
+* fastai
 
 
 ### Prerequisites
