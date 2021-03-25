@@ -1,6 +1,6 @@
 # Larry D. Cawley Jr.
 
-P: ( 870 ) 441 - 6503 E: larrydcj@icloud.com GH: https://github.com/LarryDCJ L: Vancouver, WA
+E: larrydcj@icloud.com GH: https://github.com/LarryDCJ L: Vancouver, WA
 
 ## SKILLS & EXPERTISE
 
