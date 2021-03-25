@@ -10,7 +10,7 @@ driver_path = "./chromedriver/chromedriver"
 wd = webdriver.WebDriver(executable_path=driver_path)
 
 
-def fetch_image_urls(query: str, max_links_to_fetch: int, wd: webdriver, sleep_between_interactions: int = 1):
+def fetch_image_urls(query: str, max_links_to_fetch: int, wd: webdriver, sleep_between_interactions: int = .5):
 	def scroll_to_end(wd):
 		wd.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 		time.sleep(sleep_between_interactions)
@@ -60,7 +60,7 @@ def fetch_image_urls(query: str, max_links_to_fetch: int, wd: webdriver, sleep_b
 			if load_more_button:
 				wd.execute_script("document.querySelector('.mye4qd').click();")
 
-		# move the result startpoint further down
+		# move the result start point further down
 		results_start = len(thumbnail_results)
 
 	return image_urls
@@ -84,20 +84,24 @@ def persist_image(folder_path: str, url: str):
 		print(f"ERROR - Could not save {url} - {e}")
 
 
-def search_and_download(search_term: str, driver_path: str, target_path='./images', number_images=5):
-	target_folder = os.path.join(target_path, '_'.join(search_term.lower().split(' ')))
-
+def search_and_download(search_term: str, driver_path, target_path='/images', number_images=50):
+	target_folder = os.path.join(target_path)  # this code makes another folder in lower case of search term
+	# inside original search term folder #.join(search_term.lower().split(' '))
 	if not os.path.exists(target_folder):
 		os.makedirs(target_folder)
 
 	with wd:
-		res = fetch_image_urls(search_term, number_images, wd=wd, sleep_between_interactions=0.5)
+		res = fetch_image_urls(search_term, number_images, wd=wd, sleep_between_interactions=.5)
 
 	for elem in res:
 		persist_image(target_folder, elem)
 
-search_term = input("Enter Search Term. This will also become the folder and filename + #.")
-search_and_download(f"{search_term}", wd, f"./{search_term}")
 
-#TODO create file naming structure that won't break and can iterate new images intended for different models
-#FIXME nothing is broken at the moment
+list_of_terms = ["KC-46"]
+#TODO Program won't loop over a list of terms due to connection timeout
+
+for plane in list_of_terms:
+	search_term = f"{plane}"  # Enter your search term as a string here
+	search_and_download(f"{search_term}", wd, f"./images/{search_term}")
+#TODO implement file renamer that renames after download to name of folder, appended with sequential number based on
+# the last item in the folder, -1.

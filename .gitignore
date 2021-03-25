@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/.gitignore
+.idea/AC_Classifier.iml
+.idea/aws.xml
+.idea/dictionaries
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+MQ-1/mq-1/
+MQ-9/mq-9/
+chromedriver/
+requirements.txt
