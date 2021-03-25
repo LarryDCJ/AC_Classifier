@@ -14,36 +14,42 @@
   </p>
 </p>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 This model is being developed to recognize images of aircraft and provide the name, country of origin, and any legally free available technical data.
 
+Current A/C:
+A-10, AC-130,bAWACS, B-1, B-2, B-52, C-5, C-17, F-15E, F-16, F-22, F-35, KC-10, KC-46, MQ-1, MQ-9, and the RQ-4.
 
 ### Built With
 
-* [Python]()
-* [Selenium]()
-* [chromedriver]()
+* Python and a few built-in modules
+* Selenium
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* Selenium
-```sh
-conda install Selenium
-OR
-pip install Selenium
+* Ensure you have [Google Chrome](https://www.google.com/chrome/) downloaded.<br />
+You'll also need to know your version of Chrome.
+
+* [Chromium Chromedriver](https://chromedriver.chromium.org)
+
+## Getting Started
+
+To install selenium, you will need either Anaconda or pip installed.
 ```
+conda install selenium
+```
+
+
+You will also need to install Pillow
+```bazaar
+conda install Pillow
+```
+
+By default, the scraper is set to create an "images" folder at the .py root. There, it creates subfolders mirroring your search terms. It names pictures based on a returned hash function.
+
 
 
 <!-- CONTACT -->
@@ -57,5 +63,5 @@ Project Link: [https://github.com/LarryDCJ/AC_Classifier](https://github.com/Lar
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [My amazing wife, Anna]()
-* [My wonderful daughter, Laila]()
+* My amazing wife, Anna
+* My wonderful daughter, Laila
