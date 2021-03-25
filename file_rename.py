@@ -9,7 +9,8 @@ import os
 
 '''
 
-def renameFiles(path, depth=99):
+
+def renameFiles(path="/images/*", depth=99):
 	# Once we hit depth, return
 	if depth < 0: return
 
@@ -61,4 +62,6 @@ def renameFiles(path, depth=99):
 						os.rename(fullpath, newpath)
 						ind += 1
 	return
-renameFiles(os.getcwd())
+
+
+renameFiles()

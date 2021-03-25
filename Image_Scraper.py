@@ -97,7 +97,7 @@ def search_and_download(search_term: str, driver_path, target_path='/images', nu
 		persist_image(target_folder, elem)
 
 
-list_of_terms = ["KC-46"]
+list_of_terms = ["Mirage 2000"]
 #TODO Program won't loop over a list of terms due to connection timeout
 
 for plane in list_of_terms:
