@@ -27,6 +27,7 @@ A-10, AC-130, AWACS, B-1, B-2, B-52, C-5, C-17, F-15E, F-16, FA-18, F-22, F-35, 
 
 * Python and a few built-in modules
 * Selenium
+* fastai
 
 
 ### Prerequisites
