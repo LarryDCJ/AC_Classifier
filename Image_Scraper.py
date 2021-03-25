@@ -5,8 +5,9 @@ from selenium.webdriver.chrome import webdriver
 import os
 from PIL import Image
 import time
+from file_rename import renameFiles
 
-driver_path = "./chromedriver/chromedriver"
+driver_path = "/Users/larrydcj/Documents/Programming/Projects/AC_Classifier/chromedriver/chromedriver"
 wd = webdriver.WebDriver(executable_path=driver_path)
 
 
@@ -97,11 +98,13 @@ def search_and_download(search_term: str, driver_path, target_path='/images', nu
 		persist_image(target_folder, elem)
 
 
-list_of_terms = ["Mirage 2000"]
+list_of_terms = ["SR-71"]
 #TODO Program won't loop over a list of terms due to connection timeout
 
 for plane in list_of_terms:
 	search_term = f"{plane}"  # Enter your search term as a string here
 	search_and_download(f"{search_term}", wd, f"./images/{search_term}")
+	renameFiles()
+
 #TODO implement file renamer that renames after download to name of folder, appended with sequential number based on
 # the last item in the folder, -1.

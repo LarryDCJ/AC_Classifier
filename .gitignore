@@ -1,13 +1,1 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/.gitignore
-.idea/AC_Classifier.iml
-.idea/aws.xml
-.idea/dictionaries
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-chromedriver/
-/images
-.idea/csv-plugin.xml
-requirements.txt

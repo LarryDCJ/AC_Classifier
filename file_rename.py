@@ -10,7 +10,7 @@ import os
 '''
 
 
-def renameFiles(path="/images/*", depth=99):
+def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifier/images", depth=99):
 	# Once we hit depth, return
 	if depth < 0: return
 
