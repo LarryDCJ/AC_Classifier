@@ -85,7 +85,7 @@ def persist_image(folder_path: str, url: str):
 		print(f"ERROR - Could not save {url} - {e}")
 
 
-def search_and_download(search_term: str, driver_path, target_path='/images', number_images=50):
+def search_and_download(search_term: str, driver_path, target_path='/images', number_images=125):
 	target_folder = os.path.join(target_path)  # this code makes another folder in lower case of search term
 	# inside original search term folder #.join(search_term.lower().split(' '))
 	if not os.path.exists(target_folder):
@@ -98,13 +98,16 @@ def search_and_download(search_term: str, driver_path, target_path='/images', nu
 		persist_image(target_folder, elem)
 
 
-list_of_terms = ["SR-71"]
-#TODO Program won't loop over a list of terms due to connection timeout
+list_of_terms = ["A-10", "AC-130", "AWACS", "B-1", "B-2",
+				 "B-52", "C-5", "C-17", "F-15E", "F-16",
+				 "F-22", "F-35", "FA-18", "KC-10", "KC-46",
+				 "Mirage-2000", "MQ-1", "MQ-9", "RQ-4", "SR-71"]
 
 for plane in list_of_terms:
 	search_term = f"{plane}"  # Enter your search term as a string here
 	search_and_download(f"{search_term}", wd, f"./images/{search_term}")
 	renameFiles()
+	wd.quit()
 
-#TODO implement file renamer that renames after download to name of folder, appended with sequential number based on
+# TODO implement file renamer that renames after download to name of folder, appended with sequential number based on
 # the last item in the folder, -1.

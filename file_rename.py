@@ -1,5 +1,6 @@
 import os
-
+import re
+from pathlib import Path
 '''
 
  Function: renameFiles
@@ -8,13 +9,11 @@ import os
     @depth: How deep you want to traverse the folder. Defaults to 99 levels. 
 
 '''
-
-
 def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifier/images", depth=99):
 	# Once we hit depth, return
 	if depth < 0: return
 
-	# Make sure that a path was supplied and it is not a symbolic link
+	# checks path is a real directory, not a symlink
 	if os.path.isdir(path) and not os.path.islink(path):
 		# We will use a counter to append to the end of the file name
 		ind = 00
@@ -45,7 +44,6 @@ def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifi
 
 						# Lets get the full path of the files in question
 						dir_path = os.path.basename(os.path.dirname(os.path.realpath(folder)))
-						print(dir_path)
 
 						# We then define the name of the new path in order
 						# The full path, then a dash, then 2 digits, then the extension
@@ -66,4 +64,6 @@ def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifi
 
 
 renameFiles()
-#TODO Mirage_2000 should have the underscore removed for visual
+
+import duplicate
+duplicate.find('/images')
