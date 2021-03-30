@@ -9,7 +9,7 @@ from pathlib import Path
     @depth: How deep you want to traverse the folder. Defaults to 99 levels. 
 
 '''
-def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifier/images", depth=99):
+def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifier/images/", depth=99):
 	# Once we hit depth, return
 	if depth < 0: return
 
@@ -61,9 +61,5 @@ def renameFiles(path="/Users/larrydcj/Documents/Programming/Projects/AC_Classifi
 						os.rename(fullpath, newpath)
 						ind += 1
 	return
-
-
 renameFiles()
 
-import duplicate
-duplicate.find('/images')

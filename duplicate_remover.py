@@ -32,19 +32,19 @@ for folder in folders:
                         duplicates.append((index,hash_keys[filehash]))
 
 print(duplicates)
-for file_indexes in duplicates[:30]:
-    try:
+#for file_indexes in duplicates[:30]:
+#    try:
+#
+#        plt.subplot(121), plt.imshow(imread(duplicates[file_indexes[1]]))
+#        plt.title(file_indexes[1]), plt.xticks([]), plt.yticks([])
+#
+#        plt.subplot(122), plt.imshow(imread(duplicates[file_indexes[0]]))
+#        plt.title(str(file_indexes[0]) + ' duplicate'), plt.xticks([]), plt.yticks([])
+#        plt.show()
+#
+#   except OSError as e:
+#       continue
 
-        plt.subplot(121), plt.imshow(imread(duplicates[file_indexes[1]]))
-        plt.title(file_indexes[1]), plt.xticks([]), plt.yticks([])
 
-        plt.subplot(122), plt.imshow(imread(duplicates[file_indexes[0]]))
-        plt.title(str(file_indexes[0]) + ' duplicate'), plt.xticks([]), plt.yticks([])
-        plt.show()
-
-    except OSError as e:
-        continue
-
-
-#for index in duplicates:
-#    os.remove(file_list[index[0]])
+for index in duplicates:
+    os.remove(duplicates[index[0]])
